@@ -1,9 +1,11 @@
-# E羊icques&mdash;An unofficial Scratch mod
+# SN Edit &mdash;An official SNext Game Editor
 
-The mod is available at https://sheeptester.github.io/scratch-gui/.
+(This is technically not maintained by Cube Enix. This is a fork of SheepTester's Scratch Mod so this is technically also an unofficial Scratch Mod maintained by Cube Enix and SheepTester but lets be casual here.)
 
-The name is pronounced /ɛjɑŋ˧˥ˈik/ ("eh," "yahng" with a rising tone, stressed "EEK"). It comes from English "epic" but with *-cques* from Ja**cques**, producing "epicques" with stress and vowels as it would be in French. Then, I substituted the p with 羊, which is pronounced *yáng* in Mandarin. The name is quite unfriendly to pronounce and write, so any alternative spellings or pronunciations are tolerated.
+## Whats this for?
+This is a special version of one SheepTester's 67 children name "E羊icques" Don't bother trying to pronounce his name. ANyways this fork exist to add more features that should be common place in all SNext games including *forced 16:9 aspect ratio*. It also includes support for TurboWarp Blocks, specific extensions and more. Developing for SNext has never been easier!
 
+# Now heres some important info for those who have never used SheepTester's mod.
 ## URL parameters
 
 The URLs in URL parameters should be [URI encoded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
@@ -63,12 +65,6 @@ Remember that the limits exist in vanilla Scratch for a reason, so you are respo
 ## Development
 
 gui (you're here) &middot; [vm](https://github.com/SheepTester/scratch-vm/) &middot; [paint](https://github.com/SheepTester/scratch-paint/) &middot; [svg-renderer](https://github.com/SheepTester/scratch-svg-renderer/)
-
-It's called E羊icques for two reasons:
-
-- To see how people deal with radical names like these
-
-- To comply with the Scratch license, which forbids the usage of their name to promote derived products like this mod (because it might seem like the mod is official when it's not)
 
 Here's how I made the mod:
 
@@ -338,5 +334,5 @@ Here's what will happen in the project state machine:
 6. When loading is done, src/lib/vm-manager-hoc.jsx dispatches the `DONE_LOADING_VM_WITH_ID` action. This transitions the state from `LOADING_VM_WITH_ID` to `SHOWING_WITH_ID`
 7. The `SHOWING_WITH_ID` state. Now the project appears normally and is playable and editable.
 
-## Donate
-We provide [Scratch](https://scratch.mit.edu) free of charge, and want to keep it that way! Please consider making a [donation](https://secure.donationpay.org/scratchfoundation/) to support our continued engineering, design, community, and resource development efforts. Donations of any size are appreciated. Thank you!
+## Contribute
+Maintaining a big project like SNext takes big resources! You can help by fixing bugs or reporting them!
