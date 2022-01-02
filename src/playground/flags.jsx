@@ -197,7 +197,7 @@ class Flags extends React.Component {
             'handleChangeWidth',
             'handleChangeHeight'
         ]);
-        this.props.setTitle('E羊icques URL settings');
+        this.props.setTitle('SN-Edit URL settings');
 
         const { compatibilityMode, fps, spriteFencing, ...options } = parseOptionsFromUrl(false)
         this.state = {
@@ -490,7 +490,7 @@ class Flags extends React.Component {
                     </p>
                     <div className={styles.faqLinkText}>
                         <FormattedMessage
-                            defaultMessage="See {previewFaqLink} for a list of additional features in E羊icques."
+                            defaultMessage="See {previewFaqLink} for a list of additional features in SN-Edit."
                             description="Scratch 3.0 FAQ description"
                             id="gui.aaaa.previewfaq"
                             values={{
