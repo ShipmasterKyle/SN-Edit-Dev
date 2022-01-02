@@ -197,7 +197,7 @@ class Flags extends React.Component {
             'handleChangeWidth',
             'handleChangeHeight'
         ]);
-        this.props.setTitle('SN-Edit URL settings');
+        this.props.setTitle('SN-Edit Settings');
 
         const { compatibilityMode, fps, spriteFencing, ...options } = parseOptionsFromUrl(false)
         this.state = {
@@ -256,7 +256,7 @@ class Flags extends React.Component {
         window.location.href = window.location.href.replace(/flags(\.html)?/, '');
     }
     handleClickAbout () {
-        window.location.href = 'https://github.com/SheepTester/scratch-gui#readme';
+        window.location.href = 'https://github.com/Cube-Enix/sn-edt#readme';
     }
     handleChangeLoadGriffpatch (e) {
         this.setState({loadGriffpatch: e.target.checked});
@@ -280,7 +280,7 @@ class Flags extends React.Component {
         this.setState({extensionURLs: list});
     }
     handleChangeImposeLimits (e) {
-        this.setState({imposeLimits: e.target.checked});
+        this.setState({imposeLimits: e.target.unchecked});
     }
     handleChangeSpriteFencing (e) {
         this.setState({spriteFencing: e.target.checked});
@@ -321,7 +321,7 @@ class Flags extends React.Component {
                     accountNavOpen={false}
                     authorId="what do I put here lol"
                     authorThumbnailUrl="static/favicon.svg"
-                    authorUsername="SheepTester"
+                    authorUsername="Cube ENix"
                     canChangeLanguage={false}
                     canCreateCopy={false}
                     canCreateNew={false}
@@ -341,23 +341,26 @@ class Flags extends React.Component {
                     onClickLogo={this.handleClickLogo}
                 />
                 <form className={styles.content} onSubmit={this.handleSubmit}>
-                    <h2>URL settings</h2>
-                    <Field value={width} onChange={this.handleChangeWidth} default="480" type="number" name="width">
+                    <h2>Settings</h2>
+                    <h3>Stage Settings</h3>
+                    <Field value={width} onChange={this.handleChangeWidth} default="640" type="number" name="width">
                         Stage width
                     </Field>
                     <Field value={height} onChange={this.handleChangeHeight} default="360" type="number" name="height">
                         Stage height
                     </Field>
                     <Toggle checked={imposeLimits} onChange={this.handleChangeImposeLimits} name="limits">
-                        Enforce reasonable limits?
+                        Enforce Scratch Limitations?
                         <sup>[1]</sup>
                     </Toggle>
                     <Toggle checked={spriteFencing} onChange={this.handleChangeSpriteFencing} name="fencing">
-                        Prevent sprites from moving off-screen (i.e. enable sprite fencing)?
+                        Enforce Stage Fencing?
+                        <sup>[2]</sup>
                     </Toggle>
-                    <Field value={fps} onChange={this.handleChangeFps} default="30" type="number" name="fps">
+                    <Field value={fps} onChange={this.handleChangeFps} default="60" type="number" name="fps">
                         Frames per second
                     </Field>
+                    <h3>Other Settings</h3>
                     <List
                         label="Extensions"
                         value={extensionURLs}
@@ -365,7 +368,7 @@ class Flags extends React.Component {
                     />
                     <Toggle checked={loadGriffpatch} onChange={this.handleChangeLoadGriffpatch} name="load_griffpatch">
                         <FormattedMessage
-                            defaultMessage="Load Griffpatch's {previewFaqLink}?"
+                            defaultMessage="Load Griffpatch's {previewFaqLink}? (Will support Scratch Addons in the near future)"
                             description="Scratch 3.0 FAQ description"
                             id="gui.aaab.zz"
                             values={{
@@ -392,10 +395,7 @@ class Flags extends React.Component {
                         value={loadPlugins}
                         onChange={this.handleChangeLoadPlugins}
                     />
-                    <Field value={cloudHost} onChange={this.handleChangeCloudHost} default="saves cloud variables to localStorage" type="text" name="cloud_host">
-                        Custom cloud host
-                        <sup>[3]</sup>
-                    </Field>
+                    <p>Cloud Hosting is handled by SNext servers.</p>
                     <Toggle checked={cloudSpecial} onChange={this.handleChangeCloudSpecial} name="special_cloud">
                         <FormattedMessage
                             defaultMessage="Use {previewFaqLink} from the {wpw}?"
@@ -434,7 +434,7 @@ class Flags extends React.Component {
                             type="submit"
                             className={styles.backButton}
                         >
-                            Done
+                            Onward!
                         </button>
                     </Box>
 
@@ -456,37 +456,7 @@ class Flags extends React.Component {
                     </ul>
                     <p>
                         <sup>[2]</sup>
-                        Compatibility mode makes projects run at 30 fps. When
-                        disabled, projects will run at 60 fps.
-                    </p>
-                    <p>
-                        <sup>[3]</sup>
-                        Use a custom cloud host instead of the default
-                        behaviour, which is to save cloud variables to
-                        localStorage. Note that for some reason, Scratch doesn't
-                        want you to include the protocol (ie, omit <code>ws://</code> or <code>wss://</code>).
-                        <FormattedMessage
-                            defaultMessage=" Also, unless you use the {previewFaqLink}, the cloud server cannot be {code} unless it's on localhost because this site is on HTTPS."
-                            description="Scratch 3.0 FAQ description"
-                            id="gui.aaab.zzweee"
-                            values={{
-                                previewFaqLink: (
-                                    <a
-                                        className={styles.faqLink}
-                                        href="https://github.com/SheepTester/scratch-gui/archive/gh-pages.zip"
-                                    >
-                                        <FormattedMessage
-                                            defaultMessage="offline mod"
-                                            description="link to Scratch 3.0 FAQ page"
-                                            id="gui.aaab.z21"
-                                        />
-                                    </a>
-                                ),
-                                code: (
-                                    <code>ws://</code>
-                                )
-                            }}
-                        />
+                        This basically makes it so sprites can't go off screen.
                     </p>
                     <div className={styles.faqLinkText}>
                         <FormattedMessage
@@ -497,7 +467,7 @@ class Flags extends React.Component {
                                 previewFaqLink: (
                                     <a
                                         className={styles.faqLink}
-                                        href="https://github.com/SheepTester/scratch-gui#other-features"
+                                        href="https://github.com/Cube-Enix/sn-edit#other-features"
                                     >
                                         <FormattedMessage
                                             defaultMessage="Github"
