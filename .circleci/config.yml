@@ -67,6 +67,9 @@ jobs:
   unit:
     <<: *defaults
     environment:
+      GH_TOKEN: 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
+      BRANCH: master
+      TARGET_REPO: https://github.com/Cube-Enix/sn-edit.git
       JEST_JUNIT_OUTPUT_NAME: results.xml
     steps:
       - *restore_git_cache
