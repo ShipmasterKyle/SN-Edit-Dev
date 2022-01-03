@@ -321,7 +321,7 @@ class Flags extends React.Component {
                     accountNavOpen={false}
                     authorId="what do I put here lol"
                     authorThumbnailUrl="static/favicon.svg"
-                    authorUsername="Cube ENix"
+                    authorUsername="Cube Enix"
                     canChangeLanguage={false}
                     canCreateCopy={false}
                     canCreateNew={false}
