@@ -45,7 +45,7 @@ STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.large] = 1; // large mode, wide browser
 STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.largeConstrained] = 0.85; // large mode but narrow browser
 STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.small] = 0.5; // small mode, regardless of browser size
 
-let width = 480;
+let width = 640;
 let height = 360;
 if (window.location.search.indexOf('width=') !== -1) {
     width = +window.location.search.match(/width=(\d+)/)[1];
@@ -56,7 +56,7 @@ if (window.location.search.indexOf('height=') !== -1) {
 
 // Scale small stage down even more until it is as wide as it would be with
 // stage width 480.
-STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.small] = Math.min(0.5, 0.5 * 480 / width)
+STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.small] = Math.min(0.5, 0.5 * 640 / width)
 
 export default {
     standardStageWidth: width,

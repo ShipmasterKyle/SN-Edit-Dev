@@ -304,11 +304,11 @@ class Flags extends React.Component {
             cloudHost = '',
             cloudSpecial = false,
             username = 'username',
-            fps = 30,
+            fps = 60,
             extensionURLs = [],
             imposeLimits = true,
             spriteFencing = true,
-            width = 480,
+            width = 640,
             height = 360
         } = this.state;
         return (

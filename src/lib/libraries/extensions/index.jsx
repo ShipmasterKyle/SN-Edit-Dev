@@ -10,6 +10,8 @@ import musicInsetIconURL from './music/music-small.svg';
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
+import sheepUitlIconURL from './sheeptesterutil/Utilities.svg'
+
 import videoSensingIconURL from './videoSensing/video-sensing.png';
 import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
 
@@ -68,6 +70,27 @@ export default [
                 defaultMessage="For developers"
                 description="Description for the custom extension selector"
                 id="gui.extension.custom.description"
+            />
+        ),
+        featured: true
+    },
+    // Adds Sheep's Utility Extension
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Sheeptester's Utilities"
+                description="Name for the 'Utilities' extension"
+                id="gui.extension.videosensing.name"
+            />
+        ),
+        extensionId: 'utilities',
+        iconURL: sheepUitlIconURL,
+        insetIconURL: videoSensingInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Advanced Editor Tools"
+                description="Description for the 'Video Sensing' extension"
+                id="gui.extension.videosensing.description"
             />
         ),
         featured: true

@@ -61,7 +61,7 @@ const messages = [
     {
         message: (
             <FormattedMessage
-                defaultMessage="Herding cats …"
+                defaultMessage="Banning haters …"
                 description="One of the loading messages"
                 id="gui.loader.message5"
             />
@@ -81,7 +81,7 @@ const messages = [
     {
         message: (
             <FormattedMessage
-                defaultMessage="Inflating gobos …"
+                defaultMessage="Inflating ballons …"
                 description="One of the loading messages"
                 id="gui.loader.message7"
             />
@@ -91,7 +91,7 @@ const messages = [
     {
         message: (
             <FormattedMessage
-                defaultMessage="Preparing emojis …"
+                defaultMessage="Painting the world …"
                 description="One of the loading messages"
                 id="gui.loader.message8"
             />
