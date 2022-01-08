@@ -52,7 +52,7 @@
     height: 100%;
 }
 
-/* @todo: refactor radio divs to input */
+/* todo: refactor radio divs to input */
 .radio-wrapper {
     white-space: nowrap; /* make sure visibilty buttons don't wrap */
 }

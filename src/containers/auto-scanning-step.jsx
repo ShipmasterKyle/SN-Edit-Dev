@@ -18,7 +18,7 @@ class AutoScanningStep extends React.Component {
         };
     }
     componentWillUnmount () {
-        // @todo: stop the peripheral scan here
+        // todo: stop the peripheral scan here
         this.unbindPeripheralUpdates();
     }
     handlePeripheralScanTimeout () {
@@ -49,7 +49,7 @@ class AutoScanningStep extends React.Component {
             'PERIPHERAL_SCAN_TIMEOUT', this.handlePeripheralScanTimeout);
     }
     handleRefresh () {
-        // @todo: stop the peripheral scan here, it is more important for auto scan
+        // todo: stop the peripheral scan here, it is more important for auto scan
         // due to timeout and cancellation
         this.setState({
             phase: PHASES.prescan

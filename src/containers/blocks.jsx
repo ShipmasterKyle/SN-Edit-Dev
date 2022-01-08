@@ -125,7 +125,7 @@ class Blocks extends React.Component {
             this.setToolboxRefreshEnabled(false);
         };
 
-        // @todo change this when blockly supports UI events
+        // todo change this when blockly supports UI events
         addFunctionListener(this.workspace, 'translate', this.onWorkspaceMetricsChange);
         addFunctionListener(this.workspace, 'zoom', this.onWorkspaceMetricsChange);
 
@@ -168,8 +168,8 @@ class Blocks extends React.Component {
             }
             return;
         }
-        // @todo hack to resize blockly manually in case resize happened while hidden
-        // @todo hack to reload the workspace due to gui bug #413
+        // todo hack to resize blockly manually in case resize happened while hidden
+        // todo hack to reload the workspace due to gui bug #413
         if (this.props.isVisible) { // Scripts tab
             this.workspace.setVisible(true);
             if (prevProps.locale !== this.props.locale || this.props.locale !== this.props.vm.getLocale()) {
@@ -439,7 +439,7 @@ class Blocks extends React.Component {
         }
     }
     handleBlocksInfoUpdate (categoryInfo) {
-        // @todo Later we should replace this to avoid all the warnings from redefining blocks.
+        // todo Later we should replace this to avoid all the warnings from redefining blocks.
         this.handleExtensionAdded(categoryInfo);
     }
     handleCategorySelected (categoryId) {

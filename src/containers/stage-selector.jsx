@@ -92,7 +92,7 @@ class StageSelector extends React.Component {
     }
     handleSurpriseBackdrop (e) {
         e.stopPropagation(); // Prevent click from falling through to selecting stage.
-        // @todo should this not add a backdrop you already have?
+        // todo should this not add a backdrop you already have?
         const item = backdropLibraryContent[Math.floor(Math.random() * backdropLibraryContent.length)];
         this.addBackdropFromLibraryItem(item, false);
     }

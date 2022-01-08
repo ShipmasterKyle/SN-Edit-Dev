@@ -1,5 +1,5 @@
 export default class MockAudioEffects {
-    static get effectTypes () { // @todo can this be imported from the real file?
+    static get effectTypes () { // todo can this be imported from the real file?
         return {
             ROBOT: 'robot',
             REVERSE: 'reverse',

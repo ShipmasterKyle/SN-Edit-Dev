@@ -68,6 +68,7 @@ const HashParserHOC = function (WrappedComponent) {
                         const uploadedProjectTitle = this.getProjectTitleFromFilename(projectURL);
                         this.props.onReceivedProjectTitle(uploadedProjectTitle);
                     })
+                    //Wants a definition for a variable that pulls a definion. Weird.
                     .catch(error => {
                         this.props.onLoadingFinished(this.props.loadingState, false);
                     });

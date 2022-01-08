@@ -3,7 +3,7 @@ import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import Box from '../box/box.jsx';
 import Modal from '../../containers/modal.jsx';
-import styles from './camera-modal.css';
+import styles from 'camera-modal.css';
 import backIcon from './icon--back.svg';
 import cameraIcon from '../action-menu/icon--camera.svg';
 
@@ -89,7 +89,7 @@ const CameraModal = ({intl, ...props}) => (
                     >
                         <img
                             draggable={false}
-                            src={backIcon}
+                            src={backIcon} /*Is this needed?*/
                         /> {intl.formatMessage(messages.retakePhoto)}
                     </button>
                     <button

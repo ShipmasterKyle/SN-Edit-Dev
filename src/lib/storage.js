@@ -4,7 +4,7 @@ import defaultProject from './default-project';
 
 /**
  * Wrapper for ScratchStorage which adds default web sources.
- * @todo make this more configurable
+ * todo make this more configurable
  */
 class Storage extends ScratchStorage {
     constructor () {

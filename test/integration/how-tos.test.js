@@ -34,5 +34,5 @@ describe('Working with the how-to library', () => {
         await expect(logs).toEqual([]);
     });
 
-    // @todo navigating cards, etc.
+    // todo navigating cards, etc.
 });

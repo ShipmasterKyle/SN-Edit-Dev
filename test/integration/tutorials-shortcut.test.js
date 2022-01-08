@@ -34,5 +34,5 @@ describe('Working with shortcut to Tutorials library', () => {
         // should open the tutorial video immediately
         await findByXpath('//div[contains(@class, "step-video")]');
     });
-    // @todo navigating cards, etc.
+    // todo navigating cards, etc.
 });

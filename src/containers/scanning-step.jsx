@@ -25,7 +25,7 @@ class ScanningStep extends React.Component {
             'PERIPHERAL_SCAN_TIMEOUT', this.handlePeripheralScanTimeout);
     }
     componentWillUnmount () {
-        // @todo: stop the peripheral scan here
+        // todo: stop the peripheral scan here
         this.props.vm.removeListener(
             'PERIPHERAL_LIST_UPDATE', this.handlePeripheralListUpdate);
         this.props.vm.removeListener(

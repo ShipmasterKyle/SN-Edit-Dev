@@ -34,7 +34,7 @@ class ActionMenu extends React.Component {
     }
     shouldComponentUpdate (newProps, newState) {
         // This check prevents re-rendering while the project is updating.
-        // @todo check only the state and the title because it is enough to know
+        // todo check only the state and the title because it is enough to know
         //  if anything substantial has changed
         // This is needed because of the sloppy way the props are passed as a new object,
         //  which should be refactored.
@@ -72,7 +72,7 @@ class ActionMenu extends React.Component {
     }
     clickDelayer (fn) {
         // Return a wrapped action that manages the menu closing.
-        // @todo we may be able to use react-transition for this in the future
+        // todo we may be able to use react-transition for this in the future
         // for now all this work is to ensure the menu closes BEFORE the
         // (possibly slow) action is started.
         return event => {

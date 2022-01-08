@@ -92,7 +92,7 @@ button::-moz-focus-inner {
     overflow-x: visible;
     display: flex;
     flex-direction: column;
-    z-index: 10; /* @todo justify */
+    z-index: 10; /* todo justify */
 }
 
 .file-input {
@@ -128,7 +128,7 @@ button::-moz-focus-inner {
 }
 
 /*
-    @todo needs to be refactored with coming soon tooltip overrides.
+    todo needs to be refactored with coming soon tooltip overrides.
     The "!important"s are for the same reason as with coming soon, the library
     is not very easy to style.
 */

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Box from '../box/box.jsx';
 import Monitor from '../../containers/monitor.jsx';
 import PropTypes from 'prop-types';
-import {OrderedMap} from 'immutable';
+// import {OrderedMap} from 'immutable'; Remove this so we don't get errors. Its only other usage is in a comment.
 import {stageSizeToTransform} from '../../lib/screen-utils';
 
 import styles from './monitor-list.css';

@@ -44,15 +44,14 @@ class UrlOptionParser {
         return matches;
     }
 }
-
-export default function parseOptionsFromUrl (subDefaults = true) {
-    const parser = new UrlOptionParser(subDefaults)
     // TODO a hack for testing the backpack, allow backpack host to be set by url param
     // (Currently ignored; it'll always use localStorage)
+    // ¡Ojo! The GUI does not use what is parsed here. See src/lib/layout-constants.js
+export default function parseOptionsFromUrl (subDefaults = true) {
+    const parser = new UrlOptionParser(subDefaults)
     const backpackHost = parser.urlOptionValue('backpack_host', 'localStorage');
     const cloudHost = parser.urlOptionValue('cloud_host', 'localStorage');
     return {
-        // ¡Ojo! The GUI does not use what is parsed here. See src/lib/layout-constants.js
         width: parser.urlFlagInt('width', 480),
         height: parser.urlFlagInt('height', 360),
         loadGriffpatch: parser.urlFlag('load_griffpatch', false),

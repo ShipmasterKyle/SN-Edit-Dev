@@ -146,7 +146,7 @@ class SoundLibrary extends React.PureComponent {
         });
     }
     render () {
-        // @todo need to use this hack to avoid library using md5 for image
+        // todo need to use this hack to avoid library using md5 for image
         const soundLibraryThumbnailData = soundLibraryContent.map(sound => {
             const {
                 md5ext,

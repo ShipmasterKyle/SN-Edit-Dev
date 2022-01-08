@@ -1,7 +1,7 @@
 @import "../../css/units.css";
 @import "../../css/colors.css";
 
-/* @todo: refactor this class name, and component: `sprite-selector` to `sprite` */
+/* todo: refactor this class name, and component: `sprite-selector` to `sprite` */
 .sprite-selector-item {
     display: flex;
     flex-direction: column;

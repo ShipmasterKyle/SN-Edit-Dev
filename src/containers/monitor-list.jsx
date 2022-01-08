@@ -1,7 +1,7 @@
 import bindAll from 'lodash.bindall';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {OrderedMap} from 'immutable';
+// import {OrderedMap} from 'immutable'; Unused
 import {injectIntl, intlShape} from 'react-intl';
 
 import {connect} from 'react-redux';

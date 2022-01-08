@@ -118,7 +118,7 @@ class CostumeTab extends React.Component {
             // current costume.
             const oldTarget = this.props.sprites[editingTarget] ?
                 this.props.sprites[editingTarget] : this.props.stage;
-            // @todo: Find and switch to the index of the costume that is new. This is blocked by
+            // todo: Find and switch to the index of the costume that is new. This is blocked by
             // https://github.com/LLK/scratch-vm/issues/967
             // Right now, you can land on the wrong costume if a costume changing script is running.
             if (oldTarget.costumeCount !== target.costumeCount) {

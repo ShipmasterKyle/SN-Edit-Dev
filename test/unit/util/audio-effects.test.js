@@ -45,7 +45,7 @@ describe('Audio Effects manager', () => {
     });
 
     test.skip('process starts the offline rendering context and returns a promise', () => {
-        // @todo haven't been able to get web audio test api to actually run render
+        // todo haven't been able to get web audio test api to actually run render
     });
 
     test('reverse effect strictly reverses the samples', () => {

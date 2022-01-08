@@ -142,7 +142,7 @@ const cloudManagerHOC = function (WrappedComponent) {
         onShowCloudInfo: () => {},
         username: null
     };
-
+    //ownProps seems to be deined but never used. Both definitions are seemingly redunant although it seems to be used at line 161
     const mapStateToProps = (state, ownProps) => {
         const loadingState = state.scratchGui.projectState.loadingState;
         return {

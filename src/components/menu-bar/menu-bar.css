@@ -20,7 +20,7 @@
     height: $menu-bar-height;
 
     /*
-        @todo: This adds ~20px in Chrome, when scrolling to the right,
+        todo: This adds ~20px in Chrome, when scrolling to the right,
         but fixes [FFx + Safari] [resize window down + scroll to the right] bug.
         width: 100%;
     */

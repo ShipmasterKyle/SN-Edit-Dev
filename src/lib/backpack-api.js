@@ -15,7 +15,7 @@ const randomId = () => {
     }
     return str;
 };
-
+// Looks like host, username and token are all never defined. Might need to fix that.
 // Add a new property for the full thumbnail url, which includes the host.
 // Also include a full body url for loading sprite zips
 // TODO retreiving the images through storage would allow us to remove this.

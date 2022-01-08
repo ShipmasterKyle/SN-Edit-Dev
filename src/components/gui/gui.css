@@ -40,7 +40,7 @@
         However, we must also add the border width to the stage pane. All-in-all, the stage pane's final width is
         408px + ($space + $stage-standard-border-width * 2) (one border & padding per left/right side).
 
-        @todo This is in place to prevent "doubling up" of horizontal scrollbars in narrow windows, but there are likely
+        todo This is in place to prevent "doubling up" of horizontal scrollbars in narrow windows, but there are likely
         much better ways to solve that (e.g. undo #2124, remove this flex-basis entirely). However, they run their own
         risks of breaking things, so let's just leave this as-is for the time being.
     */
@@ -222,7 +222,7 @@
 
     /*
         For making the sprite-selector a scrollable pane
-        @todo: Not working in Safari
+        todo: Not working in Safari
     */
     /* TODO this also breaks the thermometer menu */
     /* overflow: hidden; */
