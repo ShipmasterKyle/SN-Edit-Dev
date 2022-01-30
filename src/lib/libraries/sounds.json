@@ -2940,30 +2940,6 @@
         "rate": 22050
     },
     {
-        "name": "Meow",
-        "tags": [
-            "animals",
-            "cat"
-        ],
-        "assetId": "83c36d806dc92327b9e7049a565c6bff",
-        "dataFormat": "",
-        "md5ext": "83c36d806dc92327b9e7049a565c6bff.wav",
-        "sampleCount": 37376,
-        "rate": 44100
-    },
-    {
-        "name": "Meow2",
-        "tags": [
-            "animals",
-            "cat"
-        ],
-        "assetId": "cf51a0c4088942d95bcc20af13202710",
-        "dataFormat": "",
-        "md5ext": "cf51a0c4088942d95bcc20af13202710.wav",
-        "sampleCount": 26048,
-        "rate": 44100
-    },
-    {
         "name": "Moo",
         "tags": [
             "animals",
