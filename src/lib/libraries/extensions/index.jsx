@@ -80,7 +80,7 @@ export default [
             <FormattedMessage
                 defaultMessage="Sheeptester's Utilities"
                 description="Name for the 'Utilities' extension"
-                id="gui.extension.videosensing.name"
+                id="gui.extension.Util.name"
             />
         ),
         extensionId: 'utilities',
@@ -89,8 +89,8 @@ export default [
         description: (
             <FormattedMessage
                 defaultMessage="Advanced Editor Tools"
-                description="Description for the 'Video Sensing' extension"
-                id="gui.extension.videosensing.description"
+                description="Description for the 'SheepTester' extension"
+                id="gui.extension.Util.description"
             />
         ),
         featured: true
