@@ -5,7 +5,6 @@
 ## Whats this for?
 This is a special version of one SheepTester's 67 children name "E羊icques" Don't bother trying to pronounce his name. ANyways this fork exist to add more features that should be common place in all SNext games including *forced 16:9 aspect ratio*. It also includes support for TurboWarp Blocks, specific extensions and more. Developing for SNext has never been easier!
 
-# Now heres some important info for those who have never used SheepTester's mod.
 ## URL parameters
 
 The URLs in URL parameters should be [URI encoded](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
