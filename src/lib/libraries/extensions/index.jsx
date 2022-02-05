@@ -11,6 +11,7 @@ import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
 import sheepUitlIconURL from './sheeptesterutil/Utilities.svg'
+import sheepUitlInsetIconURL from './sheeptesterutil/utilities-small.png'
 
 import videoSensingIconURL from './videoSensing/video-sensing.png';
 import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
@@ -80,17 +81,17 @@ export default [
             <FormattedMessage
                 defaultMessage="Sheeptester's Utilities"
                 description="Name for the 'Utilities' extension"
-                id="gui.extension.Util.name"
+                id="gui.extension.sheeputil.name"
             />
         ),
-        extensionId: 'utilities',
+        extensionId: 'sheeputil',
         iconURL: sheepUitlIconURL,
-        insetIconURL: videoSensingInsetIconURL,
+        insetIconURL: sheepUitlInsetIconURL,
         description: (
             <FormattedMessage
                 defaultMessage="Advanced Editor Tools"
                 description="Description for the 'SheepTester' extension"
-                id="gui.extension.Util.description"
+                id="gui.extension.sheeputil.description"
             />
         ),
         featured: true
