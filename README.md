@@ -12,7 +12,7 @@ The URLs in URL parameters should be [URI encoded](https://developer.mozilla.org
 | URL parameter | Description |
 | ------------- | ----------- |
 | `extension=[URL]` or `url=[URL]` | Load an extension dynamically (more info on making an extension [here](https://scratch.mit.edu/discuss/topic/277217/)). You can specify this multiple times in a URL to load multiple extensions. |
-| `width=[NUMBER]` | Custom stage width (default 480). |
+| `width=[NUMBER]` | Custom stage width (default ~~480~~ 640!). |
 | `height=[NUMBER]` | Custom stage width (default 360). |
 | `username=[STRING]` | Set a custom username (default "username") |
 | `cloud_host=[URL]` | Use a custom cloud host instead of the default behaviour, which is to save cloud variables to localStorage. Note that for some reason, Scratch doesn't want you to include the protocol (ie, omit `ws://` or `wss://`). |
