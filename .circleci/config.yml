@@ -34,7 +34,7 @@ jobs:
           command: git config --global user.name ShipmasterKyle
       - add_ssh_keys:
           fingerprints:
-            - SHA256:btJm40ynA74T7Bn0PJbegnZ76Q/QkkaW8EPlB7I6V84 silverteamroblox@gmail.com
+            - "58:4f:08:88:b7:b9:e2:85:88:33:6e:da:de:4c:b5:60"
       - deploy:
           name: deploy
           command: npm run deploy
