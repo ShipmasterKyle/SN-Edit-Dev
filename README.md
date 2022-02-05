@@ -1,9 +1,9 @@
-# SN Edit &mdash;An official SNext Game Editor
+# SN Edit &mdash;The official SNext Game Editor
 
 (This is a fork of SheepTester's Scratch Mod so this is technically also an unofficial Scratch Mod maintained by Cube Enix and SheepTester but lets be casual here.)
 
 ## Whats this for?
-This is a special version of one SheepTester's 67 children name "E羊icques" Don't bother trying to pronounce his name. ANyways this fork exist to add more features that should be common place in all SNext games including *forced 16:9 aspect ratio*. It also includes support for TurboWarp Blocks, specific extensions and more. Developing for SNext has never been easier!
+This is a special version of one SheepTester's 67 children name "E羊icques" Don't bother trying to pronounce his name. ANyways this fork exist to add more features that should be common place in all SNext games including *forced 16:9 aspect ratio*. It also includes support for TurboWarp Blocks(soon), specific extensions and more. Developing for SNext has never been easier!
 
 ## URL parameters
 
