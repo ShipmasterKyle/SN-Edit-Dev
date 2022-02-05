@@ -32,9 +32,9 @@ jobs:
       - run:
           name: set name
           command: git config --global user.name ShipmasterKyle
-      - add_ssh_key:
+      - add_ssh_keys:
           fingerprints:
-            - "ssh-keygen -t rsa -b 4096 -C "silverteamroblox@gmail.com""
+            - SHA256:btJm40ynA74T7Bn0PJbegnZ76Q/QkkaW8EPlB7I6V84 silverteamroblox@gmail.com
       - deploy:
           name: deploy
           command: npm run deploy
