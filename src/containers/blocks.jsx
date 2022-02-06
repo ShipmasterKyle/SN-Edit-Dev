@@ -505,7 +505,7 @@ class Blocks extends React.Component {
             .then(blocks => this.props.vm.shareBlocksToTarget(blocks, this.props.vm.editingTarget.id))
             .then(() => {
                 this.props.vm.refreshWorkspace();
-                this.updateToolbox(); // To show new variables/custom blocks
+                // this.updateToolbox(); Prevent the editor from showing new variables.
             });
     }
     render () {
@@ -523,7 +523,7 @@ class Blocks extends React.Component {
             onActivateColorPicker,
             onOpenConnectionModal,
             onOpenSoundRecorder,
-            updateToolboxState,
+            updateToolboxState,a
             onActivateCustomProcedures,
             onRequestCloseExtensionLibrary,
             onRequestCloseCustomProcedures,

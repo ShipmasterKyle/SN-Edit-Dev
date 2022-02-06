@@ -8,7 +8,7 @@ let messages = defineMessages({
         id: 'gui.defaultProject.meow'
     },
     variable: {
-        defaultMessage: 'my variable',
+        defaultMessage: 'var',
         description: 'Name for the default variable',
         id: 'gui.defaultProject.variable'
     }
@@ -59,7 +59,7 @@ const projectData = translateFunction => {
                         format: '',
                         rate: 11025,
                         sampleCount: 258,
-                        md5ext: '83a9787d4cb6f3b7632b4ddfebf74367.wav'
+                        md5ext: '83a9787d4cb6f3b7632b4ddfebf74367.wav'6
                     }
                 ],
                 volume: 100
@@ -74,22 +74,13 @@ const projectData = translateFunction => {
                 currentCostume: 0,
                 costumes: [
                     {
-                        assetId: 'bcf454acf82e4504149f7ffe07081dbc',
+                        assetId: 'costume1',
                         name: translator(messages.costume, {index: 1}),
                         bitmapResolution: 1,
-                        md5ext: 'bcf454acf82e4504149f7ffe07081dbc.svg',
+                        md5ext: 'costume1.svg',
                         dataFormat: 'svg',
                         rotationCenterX: 48,
                         rotationCenterY: 50
-                    },
-                    {
-                        assetId: '0fb9be3e8397c983338cb71dc84d0b25',
-                        name: translator(messages.costume, {index: 2}),
-                        bitmapResolution: 1,
-                        md5ext: '0fb9be3e8397c983338cb71dc84d0b25.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 46,
-                        rotationCenterY: 53
                     }
                 ],
                 sounds: [

@@ -203,7 +203,7 @@ class Flags extends React.Component {
         this.state = {
             fps: fps !== undefined
                 ? fps
-                : compatibilityMode === false
+                : compatibilityMode === undefined
                 ? 60
                 : undefined,
             spriteFencing: spriteFencing === undefined
@@ -306,7 +306,7 @@ class Flags extends React.Component {
             username = 'username',
             fps = 60,
             extensionURLs = [],
-            imposeLimits = true,
+            imposeLimits = false,
             spriteFencing = true,
             width = 640,
             height = 360

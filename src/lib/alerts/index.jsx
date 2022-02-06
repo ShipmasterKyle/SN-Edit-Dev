@@ -129,8 +129,8 @@ const alerts = [
         clearList: ['createSuccess', 'creating', 'createCopySuccess', 'creatingCopy',
             'createRemixSuccess', 'creatingRemix', 'saveSuccess', 'saving'],
         showDownload: true,
-        showSaveNow: true,
-        closeButton: false,
+        // showSaveNow: true,
+        closeButton: true,
         content: (
             <FormattedMessage
                 defaultMessage="Project could not save."
@@ -143,7 +143,7 @@ const alerts = [
     {
         alertId: 'saveSuccess',
         alertType: AlertTypes.INLINE,
-        clearList: ['saveSuccess', 'saving', 'savingError'],
+        clearList: ['saveSuccess', 'saving', 'savingError', 'twSaveToDiskSuccess'],
         content: (
             <FormattedMessage
                 defaultMessage="Project saved."
@@ -156,9 +156,24 @@ const alerts = [
         maxDisplaySecs: 3
     },
     {
+        alertId: 'twSaveToDiskSuccess',
+        alertType: AlertTypes.INLINE,
+        clearList: ['saveSuccess', 'saving', 'savingError', 'twSaveToDiskSuccess'],
+        content: (
+            <FormattedMessage
+                defaultMessage="Saved to your computer."
+                description="Message indicating that project was successfully saved to the user's disk"
+                id="tw.alerts.savedToDisk"
+            />
+        ),
+        iconURL: successImage,
+        level: AlertLevels.SUCCESS,
+        maxDisplaySecs: 3
+    },
+    {
         alertId: 'saving',
         alertType: AlertTypes.INLINE,
-        clearList: ['saveSuccess', 'saving', 'savingError'],
+        clearList: ['saveSuccess', 'saving', 'savingError', 'twSaveToDiskSuccess'],
         content: (
             <FormattedMessage
                 defaultMessage="Saving project…"
@@ -170,14 +185,42 @@ const alerts = [
         level: AlertLevels.INFO
     },
     {
+        alertId: 'twAutosaving',
+        alertType: AlertTypes.INLINE,
+        content: (
+            <FormattedMessage
+                defaultMessage="Creating restore point…"
+                description="Message indicating that a restore point is being created"
+                id="tw.alerts.autosaving"
+            />
+        ),
+        iconSpinner: true,
+        level: AlertLevels.INFO
+    },
+    {
         alertId: 'cloudInfo',
         alertType: AlertTypes.STANDARD,
         clearList: ['cloudInfo'],
         content: (
             <FormattedMessage
-                defaultMessage="Cloud variables in SN-Edit support letters and symbols, not just numbers. There's no maximum length or number of cloud variables." // eslint-disable-line max-len
-                description="Info about lack of cloud variable limitations"
-                id="gui.alerts.cloudInfo2"
+                defaultMessage="Please note, cloud variables only support numbers, not letters or symbols. {learnMoreLink}" // eslint-disable-line max-len
+                description="Info about cloud variable limitations"
+                id="gui.alerts.cloudInfo"
+                values={{
+                    learnMoreLink: (
+                        <a
+                            href="https://scratch.mit.edu/info/faq/#clouddata"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <FormattedMessage
+                                defaultMessage="Learn more."
+                                description="Link text to cloud var faq"
+                                id="gui.alerts.cloudInfoLearnMore"
+                            />
+                        </a>
+                    )
+                }}
             />
         ),
         closeButton: true,

@@ -1663,36 +1663,6 @@
         "rotationCenterY": 39
     },
     {
-        "name": "Cat Flying-a",
-        "tags": [
-            "animals",
-            "cat",
-            "kitty",
-            "kitten"
-        ],
-        "assetId": "a1ab94c8172c3b97ed9a2bf7c32172cd",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "a1ab94c8172c3b97ed9a2bf7c32172cd.svg",
-        "rotationCenterX": 55,
-        "rotationCenterY": 37
-    },
-    {
-        "name": "Cat Flying-b",
-        "tags": [
-            "animals",
-            "cat",
-            "kitty",
-            "kitten"
-        ],
-        "assetId": "6667936a2793aade66c765c329379ad0",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "6667936a2793aade66c765c329379ad0.svg",
-        "rotationCenterX": 44,
-        "rotationCenterY": 46
-    },
-    {
         "name": "Catcher-a",
         "tags": [
             "baseball",
