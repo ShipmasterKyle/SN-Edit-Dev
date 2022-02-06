@@ -59,7 +59,7 @@ const projectData = translateFunction => {
                         format: '',
                         rate: 11025,
                         sampleCount: 258,
-                        md5ext: '83a9787d4cb6f3b7632b4ddfebf74367.wav'6
+                        md5ext: '83a9787d4cb6f3b7632b4ddfebf74367.wav'
                     }
                 ],
                 volume: 100
