@@ -137,7 +137,7 @@ module.exports = [
             new HtmlWebpackPlugin({
                 chunks: ['lib.min', 'gui.min'],
                 template: 'src/playground/index.ejs',
-                title: 'SN-Edit: A Scratch mod with a custom aspect ratio that can load an extension from a URL',
+                title: 'SN-Edit: The Official Editor for SNext',
                 sentryConfig: process.env.SENTRY_CONFIG ? '"' + process.env.SENTRY_CONFIG + '"' : null
             }),
             new HtmlWebpackPlugin({
