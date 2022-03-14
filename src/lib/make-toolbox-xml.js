@@ -705,6 +705,20 @@ const variables = function () {
     `;
 };
 
+//? Seperate List
+const lists = function () {
+    return `
+    <category
+        name="%{BKY_CATEGORY_LIST}"
+        id="lists"
+        colour="#FF8C1A"
+        secondaryColour="#DB6E00"
+        custom="VARIABLE">
+    </category>
+    `;
+};
+
+
 const myBlocks = function () {
     return `
     <category
@@ -763,8 +777,8 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
-   // TODO: Seperate the List Menu
-   // const variablesXML = moveCategory('list') || variables(isInitialSetup, isStage, targetId);
+    //? Seperate the List Menu
+    const listXML = moveCategory('dataLists') || lists(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
 
     const everything = [
@@ -777,6 +791,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         sensingXML, gap,
         operatorsXML, gap,
         variablesXML, gap,
+        listXML, gap, //? Seperate List
         myBlocksXML
     ];
 
