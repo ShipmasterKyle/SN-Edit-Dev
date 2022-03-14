@@ -337,7 +337,7 @@ class MenuBar extends React.Component {
         };
     }
     handleClickOfflineMod () {
-        window.location = 'https://github.com/SheepTester/scratch-gui/archive/gh-pages.zip';
+        window.location = 'https://github.com/Cube-Enix/sn-edit/archive/gh-pages.zip';
     }
     render () {
         const saveNowMessage = (
@@ -363,7 +363,7 @@ class MenuBar extends React.Component {
         );
         const newProjectMessage = (
             <FormattedMessage
-                defaultMessage="New"
+                defaultMessage="New Project"
                 description="Menu bar item for creating a new project"
                 id="gui.menuBar.new"
             />
@@ -394,7 +394,7 @@ class MenuBar extends React.Component {
                     <div className={styles.fileGroup}>
                         <div className={classNames(styles.menuBarItem)}>
                             <img
-                                alt="Scratch"
+                                alt="SN-Edit"
                                 className={classNames(styles.scratchLogo, {
                                     [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                                 })}
@@ -475,7 +475,7 @@ class MenuBar extends React.Component {
                                                 onClick={this.getSaveToComputerHandler(downloadProjectCallback)}
                                             >
                                                 <FormattedMessage
-                                                    defaultMessage="Save to your computer"
+                                                    defaultMessage="Save to file"
                                                     description="Menu bar item for downloading a project to your computer" // eslint-disable-line max-len
                                                     id="gui.menuBar.downloadToComputer"
                                                 />
@@ -488,7 +488,7 @@ class MenuBar extends React.Component {
                                             onClick={this.props.onClickChangeUrlSettings}
                                         >
                                             <FormattedMessage
-                                                defaultMessage="Change URL settings"
+                                                defaultMessage="Change settings"
                                                 description="Menu bar item for downloading a project to your computer" // eslint-disable-line max-len
                                                 id="gui.menuBar.wigglesAndGiggles"
                                             />
@@ -498,7 +498,7 @@ class MenuBar extends React.Component {
                                             onClick={this.handleClickOfflineMod}
                                         >
                                             <FormattedMessage
-                                                defaultMessage="Download offline mod"
+                                                defaultMessage="Download offline version"
                                                 description="Menu bar item for downloading a project to your computer" // eslint-disable-line max-len
                                                 id="gui.menuBar.wigglesAndGiggles2"
                                             />
