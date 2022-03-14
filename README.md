@@ -61,6 +61,9 @@ Adding `limits=false` to the URL removes the following limits:
 
 Remember that the limits exist in vanilla Scratch for a reason, so you are responsible for ensuring that your project doesn't lag out of control.
 
+## Documentation
+Scratch Team had no interest in making actual documentation so while I procrastinate on the wiki heres a source I used for a lot of the edits (like adding custom blocks): https://scratch.mit.edu/discuss/topic/289503/
+
 ## Development
 
 gui (you're here) &middot; [vm](https://github.com/SheepTester/scratch-vm/) &middot; [paint](https://github.com/SheepTester/scratch-paint/) &middot; [svg-renderer](https://github.com/SheepTester/scratch-svg-renderer/)
