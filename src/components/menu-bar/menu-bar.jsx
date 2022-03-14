@@ -83,11 +83,11 @@ const ariaMessages = defineMessages({
         defaultMessage: 'language selector',
         description: 'accessibility text for the language selection menu'
     },
-    tutorials: {
-        id: 'gui.menuBar.tutorialsLibrary',
-        defaultMessage: 'Tutorials',
-        description: 'accessibility text for the tutorials button'
-    }
+    // tutorials: {
+    //     id: 'gui.menuBar.tutorialsLibrary',
+    //     defaultMessage: 'Tutorials',
+    //     description: 'accessibility text for the tutorials button'
+    // }
 });
 
 const MenuBarItemTooltip = ({
@@ -168,12 +168,16 @@ class MenuBar extends React.Component {
             'handleClickSaveAsCopy',
             'handleClickSeeCommunity',
             'handleClickShare',
+            // 'handleClickTheme',
             'handleKeyPress',
             'handleLanguageMouseUp',
             'handleRestoreOption',
             'getSaveToComputerHandler',
             'restoreOptionMessage'
         ]);
+        // this.state = {
+        //     dark: darkMediaQuery.matches
+        // }
     }
     componentDidMount () {
         document.addEventListener('keydown', this.handleKeyPress);
@@ -339,6 +343,11 @@ class MenuBar extends React.Component {
     handleClickOfflineMod () {
         window.location = 'https://github.com/Cube-Enix/sn-edit/archive/gh-pages.zip';
     }
+    // handleClickTheme () {
+    //     this.setState(state => ({
+    //         dark: !state.dark
+    //     }));
+    // }
     render () {
         const saveNowMessage = (
             <FormattedMessage
@@ -418,6 +427,12 @@ class MenuBar extends React.Component {
                             </div>
                             <LanguageSelector label={this.props.intl.formatMessage(ariaMessages.language)} />
                         </div>)}
+                        {/* {this.props.onClickTheme && (
+                            <div
+                                className={classNames(styles.menuBarItem, styles.hoverable, styles.themeButton)}
+                                onMouseUp={this.props.onClickTheme}
+                            />
+                        )} */}
                         {(this.props.canManageFiles) && (
                             <div
                                 className={classNames(styles.menuBarItem, styles.hoverable, {
@@ -553,10 +568,18 @@ class MenuBar extends React.Component {
                                         </MenuItem>
                                     )}</TurboMode>
                                 </MenuSection>
+                                //* Add Theme Toogle
+                                {/* <MenuItem onClick={onClickTheme}>
+                                    <FormattedMessage
+                                        defaultMessage="Change theme"
+                                        description="Toggle for theme changing"
+                                        id="gui.menuBar.theme"
+                                    />
+                                </MenuItem> */}
                             </MenuBarMenu>
                         </div>}
                     </div>
-                    <Divider className={classNames(styles.divider)} />
+                    {/* <Divider className={classNames(styles.divider)} />
                     <div
                         aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
                         className={classNames(styles.menuBarItem, styles.hoverable)}
@@ -567,7 +590,7 @@ class MenuBar extends React.Component {
                             src={helpIcon}
                         />
                         <FormattedMessage {...ariaMessages.tutorials} />
-                    </div>
+                    </div> */}
                     <Divider className={classNames(styles.divider)} />
                     {this.props.canEditTitle ? (
                         <div className={classNames(styles.menuBarItem, styles.growable)}>
@@ -827,6 +850,7 @@ MenuBar.propTypes = {
     onClickRemix: PropTypes.func,
     onClickSave: PropTypes.func,
     onClickSaveAsCopy: PropTypes.func,
+    // onClickTheme: PropTypes.func,
     onLogOut: PropTypes.func,
     onOpenRegistration: PropTypes.func,
     onOpenTipLibrary: PropTypes.func,
