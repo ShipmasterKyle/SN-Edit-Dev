@@ -130,7 +130,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
         setProjectId: PropTypes.func
     };
     ProjectFetcherComponent.defaultProps = {
-        assetHost: 'https://assets.scratch.mit.edu',
+        assetHost: 'https://assets.scratch.mit.edu', //In therory I should be able to change this to our own asset host and get assets from it
         projectHost: 'https://projects.scratch.mit.edu'
     };
 
