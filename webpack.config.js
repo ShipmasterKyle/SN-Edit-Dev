@@ -144,7 +144,7 @@ module.exports = [
                 chunks: ['lib.min', 'flags.min'],
                 template: 'src/playground/index.ejs',
                 filename: 'flags.html',
-                title: 'SN-Edit: URL settings'
+                title: 'SN-Edit: Settings'
             }),
             new CopyWebpackPlugin([{
                 from: 'static',
