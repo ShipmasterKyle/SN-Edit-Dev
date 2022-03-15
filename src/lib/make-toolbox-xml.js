@@ -709,7 +709,7 @@ const variables = function () {
 const lists = function () {
     return `
     <category
-        name="%{BKY_CATEGORY_LIST}"
+        name="%{BKY_CATEGORY_LISTS}"
         id="lists"
         colour="#FF8C1A"
         secondaryColour="#DB6E00"
@@ -778,7 +778,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
     //? Seperate the List Menu
-    const listXML = moveCategory('dataLists') || lists(isInitialSetup, isStage, targetId);
+    const listXML = moveCategory('lists') || lists(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
 
     const everything = [
