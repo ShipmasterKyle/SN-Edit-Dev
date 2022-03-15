@@ -66,7 +66,7 @@ Scratch Team had no interest in making actual documentation so while I procrasti
 
 ## Development
 
-gui (you're here) &middot; [vm](https://github.com/SheepTester/scratch-vm/) &middot; [paint](https://github.com/SheepTester/scratch-paint/) &middot; [svg-renderer](https://github.com/SheepTester/scratch-svg-renderer/)
+gui (you're here) &middot; [vm](https://github.com/Cube-Enix/sn-edit-vm/) &middot; [paint](https://github.com/SheepTester/scratch-paint/) &middot; [svg-renderer](https://github.com/SheepTester/scratch-svg-renderer/)
 
 Here's how I made the mod:
 
@@ -80,7 +80,9 @@ Here's how I made the mod:
 
 ---
 
-#### Scratch GUI is a set of React components that comprise the interface for creating and running Scratch 3.0 projects
+#### Developing for SN-Edit by trying your hand at crating features is much welcome and very appriciated
+
+Unlike Scratch Team, we actually read pull requests.
 
 ## Installation
 This requires you to have Git and Node.js installed.
@@ -113,33 +115,33 @@ Then go to [http://localhost:8601/](http://localhost:8601/) - the playground out
 ### Getting another repo to point to this code
 
 
-If you wish to develop `scratch-gui` alongside other scratch repositories that depend on it, you may wish
-to have the other repositories use your local `scratch-gui` build instead of fetching the current production
-version of the scratch-gui that is found by default using `npm install`.
+If you wish to develop `sn-edit` alongside other scratch repositories that depend on it, you may wish
+to have the other repositories use your local `sn-edit` build instead of fetching the current production
+version of the sn-edit that is found by default using `npm install`.
 
-Here's how to link your local `scratch-gui` code to another project's `node_modules/scratch-gui`.
+Here's how to link your local `sn-edit` code to another project's `node_modules/sn-edit`.
 
 #### Configuration
 
-1. In your local `scratch-gui` repository's top level:
+1. In your local `sn-edit` repository's top level:
     1. Make sure you have run `npm install`
     2. Build the `dist` directory by running `BUILD_MODE=dist npm run build`
     3. Establish a link to this repository by running `npm link`
 
-2. From the top level of each repository (such as `scratch-www`) that depends on `scratch-gui`:
+2. From the top level of each repository that depends on `sn-edit`:
     1. Make sure you have run `npm install`
-    2. Run `npm link scratch-gui`
+    2. Run `npm link sn-edit`
     3. Build or run the repository
 
 #### Using `npm run watch`
 
-Instead of `BUILD_MODE=dist npm run build`, you can use `BUILD_MODE=dist npm run watch` instead. This will watch for changes to your `scratch-gui` code, and automatically rebuild when there are changes. Sometimes this has been unreliable; if you are having problems, try going back to `BUILD_MODE=dist npm run build` until you resolve them.
+Instead of `BUILD_MODE=dist npm run build`, you can use `BUILD_MODE=dist npm run watch` instead. This will watch for changes to your `sn-edit` code, and automatically rebuild when there are changes. Sometimes this has been unreliable; if you are having problems, try going back to `BUILD_MODE=dist npm run build` until you resolve them.
 
 #### Oh no! It didn't work!
 
 If you can't get linking to work right, try:
 * Follow the recipe above step by step and don't change the order. It is especially important to run `npm install` _before_ `npm link`, because installing after the linking will reset the linking.
-* Make sure the repositories are siblings on your machine's file tree, like `.../.../MY_SCRATCH_DEV_DIRECTORY/scratch-gui/` and `.../.../MY_SCRATCH_DEV_DIRECTORY/scratch-www/`.
+* Make sure the repositories are siblings on your machine's file tree, like `.../.../MY_SCRATCH_DEV_DIRECTORY/sn-edit/` and `.../.../MY_SCRATCH_DEV_DIRECTORY/sn-edit-vm/`.
 * Consistent node.js version: If you have multiple Terminal tabs or windows open for the different Scratch repositories, make sure to use the same node version in all of them.
 * If nothing else works, unlink the repositories by running `npm unlink` in both, and start over.
 
@@ -154,7 +156,7 @@ See [jest cli docs](https://facebook.github.io/jest/docs/en/cli.html#content) fo
 
 *NOTE: If you're a windows user, please run these scripts in Windows `cmd.exe`  instead of Git Bash/MINGW64.*
 
-Before running any tests, make sure you have run `npm install` from this (scratch-gui) repository's top level.
+Before running any tests, make sure you have run `npm install` from this (sn-edit) repository's top level.
 
 #### Main testing command
 
@@ -255,8 +257,8 @@ npm install  --no-optional --save-dev react-intl-redux@^0.7
 The dependency itself might have more missing dependencies, which will show up like this:
 
 ```
-user@machine:~/sources/scratch/scratch-gui (491-translatable-library-objects)$ npm install  --no-optional --save-dev react-intl-redux@^0.7
-scratch-gui@0.1.0 /media/cuideigin/Linux/sources/scratch/scratch-gui
+user@machine:~/sources/scratch/sn-edit (491-translatable-library-objects)$ npm install  --no-optional --save-dev react-intl-redux@^0.7
+sn-edit@0.1.0 /media/cuideigin/Linux/sources/scratch/sn-edit
 ├── react-intl-redux@0.7.0
 └── UNMET PEER DEPENDENCY react-responsive@5.0.0
 ```
@@ -279,11 +281,11 @@ If you run into npm install errors, try these steps:
 
 ## Publishing to GitHub Pages
 You can publish the GUI to github.io so that others on the Internet can view it.
-[Read the wiki for a step-by-step guide.](https://github.com/LLK/scratch-gui/wiki/Publishing-to-GitHub-Pages)
+[Read the wiki for a step-by-step guide.](https://github.com/LLK/sn-edit/wiki/Publishing-to-GitHub-Pages)
 
 ## Understanding the project state machine
 
-Since so much code throughout scratch-gui depends on the state of the project, which goes through many different phases of loading, displaying and saving, we created a "finite state machine" to make it clear which state it is in at any moment. This is contained in the file src/reducers/project-state.js .
+Since so much code throughout sn-edit depends on the state of the project, which goes through many different phases of loading, displaying and saving, we created a "finite state machine" to make it clear which state it is in at any moment. This is contained in the file src/reducers/project-state.js .
 
 It can be hard to understand the code in src/reducers/project-state.js . There are several types of data and functions used, which relate to each other:
 
