@@ -713,7 +713,7 @@ const lists = function () {
         id="lists"
         colour="#FF8C1A"
         secondaryColour="#DB6E00"
-        custom="VARIABLE">
+        custom="LISTS">
     </category>
     `;
 };
