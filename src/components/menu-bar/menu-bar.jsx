@@ -568,8 +568,8 @@ class MenuBar extends React.Component {
                                         </MenuItem>
                                     )}</TurboMode>
                                 </MenuSection>
-                                //* Add Theme Toogle
-                                {/* <MenuItem onClick={onClickTheme}>
+                                {/* Add Theme Toogle
+                                /* <MenuItem onClick={onClickTheme}>
                                     <FormattedMessage
                                         defaultMessage="Change theme"
                                         description="Toggle for theme changing"
