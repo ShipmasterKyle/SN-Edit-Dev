@@ -391,7 +391,7 @@ class Flags extends React.Component {
                         Username
                     </Field>
                     <List
-                        label="Custom editor scripts"
+                        label="Plugins"
                         value={loadPlugins}
                         onChange={this.handleChangeLoadPlugins}
                     />
@@ -457,6 +457,9 @@ class Flags extends React.Component {
                     <p>
                         <sup>[2]</sup>
                         This basically makes it so sprites can't go off screen.
+                    </p>
+                    <p>
+                        Scratch Addons Support is on the SN-Edit to do list.
                     </p>
                     <div className={styles.faqLinkText}>
                         <FormattedMessage
