@@ -763,6 +763,8 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
+   // TODO: Seperate the List Menu
+   // const variablesXML = moveCategory('list') || variables(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
 
     const everything = [
