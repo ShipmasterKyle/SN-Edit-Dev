@@ -705,20 +705,6 @@ const variables = function () {
     `;
 };
 
-//? Seperate List
-const lists = function () {
-    return `
-    <category
-        name="%{BKY_CATEGORY_LISTS}"
-        id="lists"
-        colour="#FF8C1A"
-        secondaryColour="#DB6E00"
-        custom="LISTS">
-    </category>
-    `;
-};
-
-
 const myBlocks = function () {
     return `
     <category

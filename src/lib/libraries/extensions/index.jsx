@@ -59,7 +59,7 @@ export default [
     {
         name: (
             <FormattedMessage
-                defaultMessage="Choose an extension"
+                defaultMessage="Scratch Extension Library"
                 description="Name for the custom extension selector"
                 id="gui.extension.custom.name"
             />
@@ -71,27 +71,6 @@ export default [
                 defaultMessage="For developers"
                 description="Description for the custom extension selector"
                 id="gui.extension.custom.description"
-            />
-        ),
-        featured: true
-    },
-    // Adds Sheep's Utility Extension
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Sheeptester's Utilities"
-                description="Name for the 'Utilities' extension"
-                id="gui.extension.sheeputil.name"
-            />
-        ),
-        extensionId: 'sheeputil',
-        iconURL: sheepUitlIconURL,
-        insetIconURL: sheepUitlInsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Advanced Editor Tools"
-                description="Description for the 'SheepTester' extension"
-                id="gui.extension.sheeputil.description"
             />
         ),
         featured: true
