@@ -1,3 +1,6 @@
+/ Adapted from ScratchAddons/content-scripts/prototype-handler.js
+// Changes: Removed the check for project page
+
 function injectPrototype() {
   const oldBind = Function.prototype.bind;
   // Use custom event target
@@ -23,8 +26,7 @@ function injectPrototype() {
   };
 }
 
-if (!(document.documentElement instanceof SVGElement) && location.pathname.split("/")[1] === "projects") {
-  const injectPrototypeScript = document.createElement("script");
-  injectPrototypeScript.append(document.createTextNode("(" + injectPrototype + ")()"));
-  (document.head || document.documentElement).appendChild(injectPrototypeScript);
-}
+const injectPrototypeScript = document.createElement("script");
+injectPrototypeScript.append(document.createTextNode("(" + injectPrototype + ")()"));
+(document.head || document.documentElement).appendChild(injectPrototypeScript);
+console.log(document.head, document.documentElement);
