@@ -10,8 +10,8 @@ import musicInsetIconURL from './music/music-small.svg';
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
-import sheepUitlIconURL from './sheeptesterutil/Utilities.svg'
-import sheepUitlInsetIconURL from './sheeptesterutil/utilities-small.png'
+import highClassIcon from './snext_highClass/highClass.svg'
+import highClassInsetIcon from './snext_highClass/highClass_small.svg'
 
 import videoSensingIconURL from './videoSensing/video-sensing.png';
 import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
@@ -71,6 +71,26 @@ export default [
                 defaultMessage="For developers"
                 description="Description for the custom extension selector"
                 id="gui.extension.custom.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="highClass"
+                description="Name for the 'snext developers' extension"
+                id="gui.extension.highClass.name"
+            />
+        ),
+        extensionId: 'highClass',
+        iconURL: highClassIcon,
+        insetIconURL: highClassInsetIcon,
+        description: (
+            <FormattedMessage
+                defaultMessage="Tools that make general development easier."
+                description="Description for the 'snext developers' extension"
+                id="gui.extension.highClass.description"
             />
         ),
         featured: true
