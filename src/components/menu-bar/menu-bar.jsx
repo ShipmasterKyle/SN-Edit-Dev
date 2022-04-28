@@ -579,18 +579,21 @@ class MenuBar extends React.Component {
                             </MenuBarMenu>
                         </div>}
                     </div>
-                    {/* <Divider className={classNames(styles.divider)} />
-                    <div
-                        aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
-                        className={classNames(styles.menuBarItem, styles.hoverable)}
-                        onClick={this.props.onOpenTipLibrary}
-                    >
-                        <img
-                            className={styles.helpIcon}
-                            src={helpIcon}
-                        />
-                        <FormattedMessage {...ariaMessages.tutorials} />
-                    </div> */}
+                    {this.props.onClickAddonsSettings && (
+                        <div
+                            className={classNames(styles.menuBarItem, styles.hoverable)}
+                            onMouseUp={this.props.onClickAddonsSettings}
+                        >
+                            <div>
+                                <FormattedMessage
+                                    // Used by the vm to make the addons blocks
+                                    defaultMessage="Addons"
+                                    description="Menu bar item for addon settings"
+                                    id="sn.menuBar.addons"
+                                />
+                            </div>
+                        </div>
+                    )}
                     <Divider className={classNames(styles.divider)} />
                     {this.props.canEditTitle ? (
                         <div className={classNames(styles.menuBarItem, styles.growable)}>
@@ -841,6 +844,7 @@ MenuBar.propTypes = {
         )
     ]),
     onClickAccount: PropTypes.func,
+    onClickAddonsSettings: PropTypes.func,
     onClickEdit: PropTypes.func,
     onClickFile: PropTypes.func,
     onClickLanguage: PropTypes.func,
